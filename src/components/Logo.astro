@@ -1,6 +1,7 @@
 ---
-const logoSrc = "/images/logo.png"
-const altText = "Red Innovation Logo"
+const { class: className, ...rest } = Astro.props
 ---
 
-<img class="w-48 h-48" src={logoSrc} alt={altText} />
+<div class={ className }>
+    <img class="w-48 h-48" { ...rest } />
+</div>
